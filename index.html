@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PhotoHaul - Smart Photo Organizer for Windows</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="PhotoHaul is a free Windows app that takes all your scattered photos and organizes them into tidy date-based folders, removing duplicates and chaos.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="page-shell">
+    <div class="content-inner">
+        <header>
+            <div class="brand">
+                <div class="brand-logo">Ph</div>
+                <div>
+                    <div class="brand-text-title">PhotoHaul</div>
+                    <div class="brand-text-sub" id="brand-sub">Free photo organizer for humans, not clouds.</div>
+                </div>
+            </div>
+            <div class="lang-selector">
+                <span id="lang-label">Language</span>
+                <select id="lang-select">
+                    <option value="auto">Auto</option>
+                    <option value="en">English</option>
+                    <option value="it">Italiano</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                    <option value="ru">Русский</option>
+                </select>
+            </div>
+        </header>
+
+        <!-- HAMSTER BANNER -->
+        <div class="hamster-banner-wrapper">
+            <div class="hamster-banner-container" id="hamsterBannerContainer">
+                <div class="banner-shadow"></div>
+                <div class="banner-cat" id="bannerCat"></div>
+                <div id="bannerHamstersContainer"></div>
+            </div>
+        </div>
+
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="hero-left">
+                <div class="eyebrow">
+                    <div class="eyebrow-dot">∞</div>
+                    <span id="eyebrow-text">Take back control of your memories.</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="hero-highlight" id="hero-title-main">
+                        All your photos, finally not a mess.
+                    </span>
+                </h1>
+                <p class="hero-subtitle" id="hero-subtitle">
+                    PhotoHaul is a free Windows app that grabs all your scattered photos from disks, phones and old backups
+                    and turns them into a clean, date-based archive with no duplicates and zero cloud dependency.
+                </p>
+
+                <div class="hero-bullets">
+                    <div class="bullet-item">
+                        <div class="bullet-icon">📂</div>
+                        <div id="bullet-1">
+                            Automatic folders by date (year / month / day) so you can finally find your life again.
+                        </div>
+                    </div>
+                    <div class="bullet-item">
+                        <div class="bullet-icon">🧹</div>
+                        <div id="bullet-2">
+                            Smart duplicate detection: same photo, different place? It keeps one, you keep the space.
+                        </div>
+                    </div>
+                    <div class="bullet-item">
+                        <div class="bullet-icon">🖥️</div>
+                        <div id="bullet-3">
+                            Works on your own hard disk. No tracking, no account, no "AI on the cloud".
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-actions">
+                    <div class="download-buttons-group">
+                        <button type="button" class="btn-primary" onclick="openAntvirusModal('installer')" id="download-installer-btn">
+                            <span class="icon">⬇️</span>
+                            <span id="download-installer-text">Download PhotoHaul for Windows</span>
+                        </button>
+                        <button type="button" class="btn-primary btn-secondary" onclick="openAntvirusModal('zip')" id="download-zip-btn">
+                            <span class="icon">📦</span>
+                            <span id="download-zip-text">Download ZIP</span>
+                        </button>
+                    </div>
+                    <button type="button" class="btn-ghost" onclick="scrollToInstructions()">
+                        <span>📖</span>
+                        <span id="how-it-works-btn">How it works</span>
+                    </button>
+                </div>
+                <div class="download-subtitles">
+                    <div id="subtitle-installer">Click and it works</div>
+                    <div id="subtitle-zip">For code lovers</div>
+                </div>
+                <div class="download-meta" id="download-meta">
+                    Windows 10 / 11 • No installer, no ads, no tracking. Just unzip and run.
+                </div>
+
+                <div class="trust-badges">
+                    <div class="trust-badge">
+                        <span class="trust-badge-icon">🧡</span>
+                        <span id="badge-1">Free software philosophy friendly</span>
+                    </div>
+                    <div class="trust-badge">
+                        <span class="trust-badge-icon">🔒</span>
+                        <span id="badge-2">No spyware • No telemetry • Local only</span>
+                    </div>
+                    <div class="trust-badge">
+                        <span class="trust-badge-icon">🧪</span>
+                        <span id="badge-3">Tested on real messy disks™</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-right">
+                <div class="hero-card">
+                    <div class="hero-card-header">
+                        <div class="hero-card-title" id="hero-card-title">
+                            One folder for each day of your life.
+                        </div>
+                        <div class="hero-card-chip" id="hero-card-chip">
+                            Chaos → Archive mode
+                        </div>
+                    </div>
+                    <div class="hero-card-main">
+                        <div class="hero-card-image">
+                            <div class="hero-card-image-caption" id="hero-card-image-caption">
+                                Before: "New folder (23) – backup_old_FINAL"
+                                <br>
+                                After: <strong>2020-08-15_Birthday</strong>
+                            </div>
+                        </div>
+                        <div class="hero-card-body" id="hero-card-body">
+                            Point PhotoHaul to a disk or folder, press Start and watch the mess collapse into
+                            clean date-based folders. Your photos stay on your drives, where they belong.
+                        </div>
+                    </div>
+                    <div class="hero-card-footer">
+                        <div id="hero-card-footer-text">
+                            Built by people who hate losing photos and love simple tools.
+                        </div>
+                        <div class="chip-inline" id="hero-card-footer-chip">
+                            No cloud. No login. No nonsense.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ANTIVIRUS NOTICE -->
+        <section class="section section-danger">
+            <h2 class="section-title" id="av-title">About antivirus warnings (read this)</h2>
+            <p class="section-text" id="av-text-1">
+                PhotoHaul is a small independent app. We don't pay for expensive code-signing certificates, so some antivirus
+                tools might show a generic warning like "unknown publisher" or "this file is rarely downloaded".
+            </p>
+            <p class="section-text" id="av-text-2">
+                This does <strong>not</strong> mean the app is dangerous. It only means: "This is new and not from a big company".
+                The executable is built clean, locally tested and does not connect anywhere except where you ask it to.
+            </p>
+            <ul class="section-list" id="av-list">
+                <li>No hidden installers, no browser toolbars, no miners.</li>
+                <li>No automatic uploads to the cloud.</li>
+                <li>You can always scan the file with multiple online scanners if you like.</li>
+            </ul>
+        </section>
+
+        <!-- HOW IT WORKS -->
+        <section class="section" id="instructions-section">
+            <div class="instructions-wrapper">
+                <div>
+                    <h2 class="section-title" id="how-it-works-title">How PhotoHaul works</h2>
+                    <p class="section-text" id="how-it-works-text-1">
+                        1. You choose one or more folders or drives where your photos are hiding: old backups,
+                        phone exports, "Pictures", external disks, etc.
+                    </p>
+                    <p class="section-text" id="how-it-works-text-2">
+                        2. PhotoHaul reads the dates from the files (EXIF when possible, otherwise file date) and
+                        creates an organized tree like <code>2024\2024-08\2024-08-15\</code>.
+                    </p>
+                    <p class="section-text" id="how-it-works-text-3">
+                        3. When it finds duplicates, it keeps only one copy (according to the rules you choose)
+                        so you don't waste space on clones of the same photo.
+                    </p>
+                    <p class="section-text" id="how-it-works-text-4">
+                        4. At the end you get a clean archive you can put on a USB disk, NAS, or simply keep on
+                        your PC – ready for backup, viewing or sharing.
+                    </p>
+                </div>
+                <div class="carousel-container">
+                    <!-- CAROSELLO IMMAGINI -->
+                    <div class="carousel-wrapper">
+                        <img src="images/p_h1.png" alt="PhotoHaul Screenshot 1" class="carousel-img zoomable-img active" data-index="0">
+                        <img src="images/p_h2.png" alt="PhotoHaul Screenshot 2" class="carousel-img zoomable-img" data-index="1" style="display:none;">
+                        
+                        <button class="carousel-btn carousel-prev" onclick="carouselPrev()">❮</button>
+                        <button class="carousel-btn carousel-next" onclick="carouselNext()">❯</button>
+                    </div>
+                    
+                    <!-- INDICATORI PUNTI (DOTS) -->
+                    <div class="carousel-dots" id="carousel-dots">
+                        <span class="dot active" onclick="currentSlide(0)"></span>
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                    </div>
+                </div>
+
+                <!-- LIGHTBOX MODAL PER ZOOM -->
+                <div id="lightbox-modal" class="lightbox-modal">
+                    <span class="lightbox-close">&times;</span>
+                    <img class="lightbox-image" id="lightbox-image" src="" alt="">
+                </div>
+
+                <!-- MODALE ANTIVIRUS WARNING -->
+                <div id="antivirus-modal" class="antivirus-modal">
+                    <div class="antivirus-modal-content">
+                        <span class="modal-close" onclick="closeAntvirusModal()">&times;</span>
+                        
+                        <h2 id="antivirus-title">Antivirus Warning (False Positive)</h2>
+                        <p id="antivirus-intro">Your antivirus might block PhotoHaul and show a warning like this. Don't worry!</p>
+                        
+                        <!-- MOCK WINDOWS DEFENDER WINDOW -->
+                        <div class="defender-mock">
+                            <div class="defender-header">
+                                <div class="defender-title">PC protected by Windows</div>
+                                <div class="defender-close">×</div>
+                            </div>
+                            <div class="defender-body">
+                                <div class="defender-icon">🛡️</div>
+                                <div class="defender-text-main" id="defender-app-name">Microsoft Defender SmartScreen has blocked an unrecognized app.</div>
+                                <div class="defender-text-sub" id="defender-app-detail">App: PhotoHaul_Setup_v1.0.0.exe<br>Publisher: Unknown</div>
+                            </div>
+                            <div class="defender-footer">
+                                <button class="defender-btn-deny">Don't run</button>
+                                <button class="defender-btn-allow">Run anyway</button>
+                            </div>
+                        </div>
+                        
+                        <div class="antivirus-explanation">
+                            <h3 id="antivirus-what-todo">What to do:</h3>
+                            <ol id="antivirus-steps">
+                                <li id="antivirus-step-1">Click on "Run anyway" (as shown above)</li>
+                                <li id="antivirus-step-2">PhotoHaul is tested, safe, and has no ads or tracking</li>
+                                <li id="antivirus-step-3">If you want more security, scan the file with online scanners</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="antivirus-button-group">
+                            <button class="btn-primary" id="antivirus-confirm-btn" onclick="confirmDownload()">
+                                <span id="antivirus-confirm-text">I understand, download now</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FREE SOFTWARE PHILOSOPHY -->
+        <section class="section">
+            <h2 class="section-title" id="freedom-title">Why we care about free software and your freedom</h2>
+            <p class="section-text" id="freedom-text-1">
+                PhotoHaul is built around a simple idea: your photos are pieces of your life, not "content" to be harvested.
+                We like the free software philosophy: small tools, understandable behavior, no dark patterns.
+            </p>
+            <p class="section-text" id="freedom-text-2">
+                That's why we don't lock you into an account, a subscription or a platform. The output is just
+                normal folders and files. If one day you stop using PhotoHaul, your archive is still there, readable
+                by any operating system, any viewer, any backup tool.
+            </p>
+        </section>
+
+        <footer>
+            <div id="footer-left">
+                © 2025 PhotoHaul – Built with too many photos and not enough patience.
+            </div>
+            <div id="footer-right">
+                <span id="footer-note">
+                    No cloud. No ads inside the app. This page may show a banner to help keep the lights on.
+                </span>
+            </div>
+        </footer>
+    </div>
+</div>
+
+<script src="hamster-banner.js"></script>
+<script src="i18n.js"></script>
+</body>
+</html>
