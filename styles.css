@@ -492,8 +492,9 @@ header {
 
 .defender-close {
     color: white;
-    cursor: pointer;
+    cursor: default;
     font-size: 1.2rem;
+    pointer-events: none;
 }
 
 .defender-body {
@@ -520,13 +521,10 @@ header {
     color: white;
     text-decoration: underline;
     font-size: 0.85rem;
-    cursor: pointer;
+    cursor: default;
     display: inline-block;
     margin-top: 0.5rem;
-}
-
-.defender-more-info:hover {
-    opacity: 0.8;
+    pointer-events: none;
 }
 
 .defender-app-info {
@@ -566,14 +564,10 @@ header {
     border: 2px solid white;
     color: white;
     border-radius: 0.2rem;
-    cursor: pointer;
+    cursor: default;
     font-weight: 500;
     font-size: 0.9rem;
-    transition: all 0.3s ease;
-}
-
-.defender-btn-deny:hover {
-    background: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
 }
 
 .defender-btn-allow {
@@ -582,14 +576,10 @@ header {
     border: 2px solid white;
     color: white;
     border-radius: 0.2rem;
-    cursor: pointer;
+    cursor: default;
     font-weight: 500;
     font-size: 0.9rem;
-    transition: all 0.3s ease;
-}
-
-.defender-btn-allow:hover {
-    background: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
 }
 
 /* Animated cursor */
