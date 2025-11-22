@@ -358,19 +358,24 @@ header {
     background: linear-gradient(135deg, #c084fc, #a855f7);
 }
 
-.download-subtitles {
-    display: flex;
-    gap: 1rem;
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    margin-top: 0.5rem;
-    flex-wrap: wrap;
-    width: 100%;
+/* Button with subtitle inside */
+.btn-with-subtitle {
+    flex-direction: row;
+    text-align: left;
+    padding: 0.6rem 1.2rem;
 }
 
-#subtitle-installer,
-#subtitle-zip {
-    min-width: 150px;
+.btn-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.15rem;
+}
+
+.btn-subtitle {
+    font-size: 0.7rem;
+    font-weight: 400;
+    opacity: 0.8;
 }
 
 /* ===== MODALE ANTIVIRUS ===== */
@@ -443,28 +448,46 @@ header {
     line-height: 1.6;
 }
 
-/* MOCK WINDOWS DEFENDER */
+/* ANIMATED WINDOWS DEFENDER SIMULATION */
+.defender-simulation {
+    position: relative;
+    margin: 1.5rem 0;
+}
+
+.defender-step {
+    display: none;
+    position: relative;
+}
+
+.defender-step.active {
+    display: block;
+    animation: fadeInStep 0.5s ease;
+}
+
+@keyframes fadeInStep {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 .defender-mock {
-    background: linear-gradient(180deg, #6b46c1 0%, #7c3aed 100%);
+    background: #68217a;
     border-radius: 0.5rem;
     overflow: hidden;
-    margin: 1.5rem 0;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .defender-header {
-    background: #6b46c1;
+    background: #68217a;
     padding: 0.75rem 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .defender-title {
     color: white;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
 }
 
 .defender-close {
@@ -476,43 +499,76 @@ header {
 .defender-body {
     padding: 1.5rem;
     color: white;
-    text-align: center;
+    text-align: left;
 }
 
 .defender-icon {
     font-size: 3rem;
     margin-bottom: 1rem;
+    text-align: center;
+    display: block;
 }
 
 .defender-text-main {
-    font-weight: 600;
-    font-size: 1rem;
-    margin-bottom: 0.75rem;
-    line-height: 1.4;
+    font-weight: 400;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
 }
 
-.defender-text-sub {
+.defender-more-info {
+    color: white;
+    text-decoration: underline;
     font-size: 0.85rem;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+.defender-more-info:hover {
+    opacity: 0.8;
+}
+
+.defender-app-info {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+}
+
+.defender-app-row {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.defender-label {
     opacity: 0.9;
-    line-height: 1.6;
+    min-width: 70px;
+}
+
+.defender-value {
+    font-weight: 400;
 }
 
 .defender-footer {
-    background: rgba(0, 0, 0, 0.1);
     padding: 1rem;
     display: flex;
     gap: 1rem;
+    justify-content: center;
+}
+
+.defender-footer-single {
     justify-content: flex-end;
 }
 
 .defender-btn-deny {
-    padding: 0.6rem 1.2rem;
+    padding: 0.5rem 1.5rem;
     background: transparent;
-    border: 1px solid white;
+    border: 2px solid white;
     color: white;
-    border-radius: 0.3rem;
+    border-radius: 0.2rem;
     cursor: pointer;
     font-weight: 500;
+    font-size: 0.9rem;
     transition: all 0.3s ease;
 }
 
@@ -521,18 +577,92 @@ header {
 }
 
 .defender-btn-allow {
-    padding: 0.6rem 1.2rem;
-    background: white;
-    border: 1px solid white;
-    color: #6b46c1;
-    border-radius: 0.3rem;
+    padding: 0.5rem 1.5rem;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    border-radius: 0.2rem;
     cursor: pointer;
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 0.9rem;
     transition: all 0.3s ease;
 }
 
 .defender-btn-allow:hover {
-    background: #f0f0f0;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Animated cursor */
+.animated-cursor {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+    z-index: 100;
+    opacity: 0;
+}
+
+.animated-cursor::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 8px solid white;
+    border-top: 6px solid transparent;
+    border-bottom: 10px solid transparent;
+    filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.5));
+}
+
+/* Cursor animation for step 1 - pointing to "More info" */
+#cursor-step-1 {
+    bottom: 80px;
+    left: 50px;
+    animation: cursorStep1 3s ease-in-out infinite;
+}
+
+@keyframes cursorStep1 {
+    0%, 100% { opacity: 0; transform: translate(0, 0); }
+    20% { opacity: 1; transform: translate(0, 0); }
+    40% { opacity: 1; transform: translate(10px, -5px); }
+    50% { opacity: 1; transform: translate(10px, -5px) scale(0.9); }
+    60% { opacity: 1; transform: translate(10px, -5px); }
+    80% { opacity: 0; transform: translate(10px, -5px); }
+}
+
+/* Cursor animation for step 2 - pointing to "Run anyway" */
+#cursor-step-2 {
+    bottom: 30px;
+    left: 30%;
+    animation: cursorStep2 3s ease-in-out infinite;
+}
+
+@keyframes cursorStep2 {
+    0%, 100% { opacity: 0; transform: translate(0, 0); }
+    20% { opacity: 1; transform: translate(0, 0); }
+    40% { opacity: 1; transform: translate(10px, -5px); }
+    50% { opacity: 1; transform: translate(10px, -5px) scale(0.9); }
+    60% { opacity: 1; transform: translate(10px, -5px); }
+    80% { opacity: 0; transform: translate(10px, -5px); }
+}
+
+/* Reassurance message styling */
+.antivirus-reassurance {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(249, 115, 115, 0.1);
+    border: 1px solid rgba(249, 115, 115, 0.3);
+    border-radius: 0.5rem;
+}
+
+.antivirus-reassurance p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.antivirus-reassurance strong {
+    color: var(--danger);
 }
 
 /* ANTIVIRUS EXPLANATION */

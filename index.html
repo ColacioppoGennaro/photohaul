@@ -81,23 +81,25 @@
 
                 <div class="hero-actions">
                     <div class="download-buttons-group">
-                        <button type="button" class="btn-primary" onclick="openAntvirusModal('installer')" id="download-installer-btn">
+                        <button type="button" class="btn-primary btn-with-subtitle" onclick="openAntvirusModal('installer')" id="download-installer-btn">
                             <span class="icon">⬇️</span>
-                            <span id="download-installer-text">Download PhotoHaul for Windows</span>
+                            <div class="btn-text-wrapper">
+                                <span id="download-installer-text">Download Installer</span>
+                                <span class="btn-subtitle" id="subtitle-installer">For those who love easy life</span>
+                            </div>
                         </button>
-                        <button type="button" class="btn-primary btn-secondary" onclick="openAntvirusModal('zip')" id="download-zip-btn">
+                        <button type="button" class="btn-primary btn-secondary btn-with-subtitle" onclick="openAntvirusModal('zip')" id="download-zip-btn">
                             <span class="icon">📦</span>
-                            <span id="download-zip-text">Download ZIP</span>
+                            <div class="btn-text-wrapper">
+                                <span id="download-zip-text">Download ZIP</span>
+                                <span class="btn-subtitle" id="subtitle-zip">If you're a nerd club member</span>
+                            </div>
                         </button>
                     </div>
                     <button type="button" class="btn-ghost" onclick="scrollToInstructions()">
                         <span>📖</span>
                         <span id="how-it-works-btn">How it works</span>
                     </button>
-                </div>
-                <div class="download-subtitles">
-                    <div id="subtitle-installer">Click and it works</div>
-                    <div id="subtitle-zip">For code lovers</div>
                 </div>
                 <div class="download-meta" id="download-meta">
                     Windows 10 / 11 • No installer, no ads, no tracking. Just unzip and run.
@@ -221,36 +223,80 @@
                 <div id="antivirus-modal" class="antivirus-modal">
                     <div class="antivirus-modal-content">
                         <span class="modal-close" onclick="closeAntvirusModal()">&times;</span>
-                        
+
                         <h2 id="antivirus-title">Antivirus Warning (False Positive)</h2>
                         <p id="antivirus-intro">Your antivirus might block PhotoHaul and show a warning like this. Don't worry!</p>
-                        
-                        <!-- MOCK WINDOWS DEFENDER WINDOW -->
-                        <div class="defender-mock">
-                            <div class="defender-header">
-                                <div class="defender-title">PC protected by Windows</div>
-                                <div class="defender-close">×</div>
+
+                        <!-- ANIMATED WINDOWS DEFENDER SIMULATION -->
+                        <div class="defender-simulation" id="defender-simulation">
+                            <!-- STEP 1: Initial screen with "More info" link -->
+                            <div class="defender-step defender-step-1 active" id="defender-step-1">
+                                <div class="defender-mock">
+                                    <div class="defender-header">
+                                        <div class="defender-title" id="defender-title-1">PC protected by Windows</div>
+                                        <div class="defender-close">×</div>
+                                    </div>
+                                    <div class="defender-body">
+                                        <div class="defender-icon">🛡️</div>
+                                        <div class="defender-text-main" id="defender-msg-1">Microsoft Defender SmartScreen prevented an unrecognized app from running. Running this app may put your PC at risk.</div>
+                                        <a href="#" class="defender-more-info" id="defender-more-info">More info</a>
+                                    </div>
+                                    <div class="defender-footer defender-footer-single">
+                                        <button class="defender-btn-deny" id="defender-deny-1">Don't run</button>
+                                    </div>
+                                </div>
+                                <!-- Animated cursor for step 1 -->
+                                <div class="animated-cursor" id="cursor-step-1"></div>
                             </div>
-                            <div class="defender-body">
-                                <div class="defender-icon">🛡️</div>
-                                <div class="defender-text-main" id="defender-app-name">Microsoft Defender SmartScreen has blocked an unrecognized app.</div>
-                                <div class="defender-text-sub" id="defender-app-detail">App: PhotoHaul_Setup_v1.0.0.exe<br>Publisher: Unknown</div>
-                            </div>
-                            <div class="defender-footer">
-                                <button class="defender-btn-deny">Don't run</button>
-                                <button class="defender-btn-allow">Run anyway</button>
+
+                            <!-- STEP 2: Expanded screen with "Run anyway" button -->
+                            <div class="defender-step defender-step-2" id="defender-step-2">
+                                <div class="defender-mock">
+                                    <div class="defender-header">
+                                        <div class="defender-title" id="defender-title-2">PC protected by Windows</div>
+                                        <div class="defender-close">×</div>
+                                    </div>
+                                    <div class="defender-body">
+                                        <div class="defender-icon">🛡️</div>
+                                        <div class="defender-text-main" id="defender-msg-2">Microsoft Defender SmartScreen prevented an unrecognized app from running. Running this app may put your PC at risk.</div>
+                                        <div class="defender-app-info">
+                                            <div class="defender-app-row">
+                                                <span class="defender-label" id="defender-app-label">App:</span>
+                                                <span class="defender-value">PhotoHaul_Setup_v1.0.0.exe</span>
+                                            </div>
+                                            <div class="defender-app-row">
+                                                <span class="defender-label" id="defender-publisher-label">Publisher:</span>
+                                                <span class="defender-value" id="defender-publisher-value">Unknown publisher</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="defender-footer">
+                                        <button class="defender-btn-allow" id="defender-allow">Run anyway</button>
+                                        <button class="defender-btn-deny" id="defender-deny-2">Don't run</button>
+                                    </div>
+                                </div>
+                                <!-- Animated cursor for step 2 -->
+                                <div class="animated-cursor" id="cursor-step-2"></div>
                             </div>
                         </div>
-                        
+
                         <div class="antivirus-explanation">
                             <h3 id="antivirus-what-todo">What to do:</h3>
                             <ol id="antivirus-steps">
-                                <li id="antivirus-step-1">Click on "Run anyway" (as shown above)</li>
-                                <li id="antivirus-step-2">PhotoHaul is tested, safe, and has no ads or tracking</li>
-                                <li id="antivirus-step-3">If you want more security, scan the file with online scanners</li>
+                                <li id="antivirus-step-1">Click on "More info" (as shown above)</li>
+                                <li id="antivirus-step-2">Then click on "Run anyway"</li>
+                                <li id="antivirus-step-3">PhotoHaul is tested, safe, and has no ads or tracking</li>
                             </ol>
+
+                            <div class="antivirus-reassurance" id="antivirus-reassurance">
+                                <p id="antivirus-reassurance-text">
+                                    <strong>Why this warning?</strong> We don't pay for expensive code-signing certificates from big companies.
+                                    This doesn't mean the app is dangerous - it just means "this is new software not from a large corporation".
+                                    PhotoHaul is safe, tested, and contains no malware.
+                                </p>
+                            </div>
                         </div>
-                        
+
                         <div class="antivirus-button-group">
                             <button class="btn-primary" id="antivirus-confirm-btn" onclick="confirmDownload()">
                                 <span id="antivirus-confirm-text">I understand, download now</span>

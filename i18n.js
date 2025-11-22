@@ -23,12 +23,19 @@ const i18n = {
         downloadMeta: "Windows 10 / 11 • No installer, no ads, no tracking. Just unzip and run.",
         avWarningTitle: "Antivirus Warning (False Positive)",
         avWarningIntro: "Your antivirus might block PhotoHaul and show a warning like this. Don't worry!",
-        avDefenderApp: "Microsoft Defender SmartScreen has blocked an unrecognized app.",
-        avDefenderDetail: "App: PhotoHaul_Setup_v1.0.0.exe\nPublisher: Unknown",
+        defenderTitle: "PC protected by Windows",
+        defenderMsg: "Microsoft Defender SmartScreen prevented an unrecognized app from running. Running this app may put your PC at risk.",
+        defenderMoreInfo: "More info",
+        defenderAppLabel: "App:",
+        defenderPublisherLabel: "Publisher:",
+        defenderPublisherValue: "Unknown publisher",
+        defenderAllow: "Run anyway",
+        defenderDeny: "Don't run",
         avWhatTodo: "What to do:",
-        avStep1: "Click on \"Run anyway\" (as shown above)",
-        avStep2: "PhotoHaul is tested, safe, and has no ads or tracking",
-        avStep3: "If you want more security, scan the file with online scanners",
+        avStep1: "Click on \"More info\" (as shown above)",
+        avStep2: "Then click on \"Run anyway\"",
+        avStep3: "PhotoHaul is tested, safe, and has no ads or tracking",
+        avReassurance: "<strong>Why this warning?</strong> We don't pay for expensive code-signing certificates from big companies. This doesn't mean the app is dangerous - it just means \"this is new software not from a large corporation\". PhotoHaul is safe, tested, and contains no malware.",
         avConfirmBtn: "I understand, download now",
         badge1: "Free software philosophy friendly",
         badge2: "No spyware • No telemetry • Local only",
@@ -77,12 +84,19 @@ const i18n = {
         downloadMeta: "Windows 10 / 11 • Nessun installer, niente pubblicità, niente tracciamento. Solo unzip e avvio.",
         avWarningTitle: "Avvertenza Antivirus (Falso Positivo)",
         avWarningIntro: "Il tuo antivirus potrebbe bloccare PhotoHaul e mostrare un avvertimento come questo. Non preoccuparti!",
-        avDefenderApp: "Microsoft Defender SmartScreen ha bloccato un'app non riconosciuta.",
-        avDefenderDetail: "App: PhotoHaul_Setup_v1.0.0.exe\nAutore: Sconosciuto",
+        defenderTitle: "PC protetto da Windows",
+        defenderMsg: "Microsoft Defender SmartScreen ha impedito l'avvio di un'app non riconosciuta. L'esecuzione di tale app potrebbe costituire un rischio per il PC.",
+        defenderMoreInfo: "Ulteriori informazioni",
+        defenderAppLabel: "App:",
+        defenderPublisherLabel: "Autore:",
+        defenderPublisherValue: "Editore sconosciuto",
+        defenderAllow: "Esegui comunque",
+        defenderDeny: "Non eseguire",
         avWhatTodo: "Cosa fare:",
-        avStep1: "Clicca su \"Esegui comunque\" (come mostrato sopra)",
-        avStep2: "PhotoHaul è testato, sicuro e senza pubblicità o tracciamento",
-        avStep3: "Se vuoi più sicurezza, scansiona il file con scanner online",
+        avStep1: "Clicca su \"Ulteriori informazioni\" (come mostrato sopra)",
+        avStep2: "Poi clicca su \"Esegui comunque\"",
+        avStep3: "PhotoHaul è testato, sicuro e senza pubblicità o tracciamento",
+        avReassurance: "<strong>Perché questo avviso?</strong> Non paghiamo costosi certificati di firma del codice delle grandi aziende. Questo non significa che l'app sia pericolosa - significa solo \"questo è un nuovo software non proveniente da una grande azienda\". PhotoHaul è sicuro, testato e non contiene malware.",
         avConfirmBtn: "Ho capito, scarica ora",
         badge1: "Vicino alla filosofia del software libero",
         badge2: "Niente spyware • Niente telemetria • Solo locale",
@@ -131,12 +145,19 @@ const i18n = {
         downloadMeta: "Windows 10 / 11 • Sin instalador, sin anuncios, sin rastreo. Solo descomprimir y ejecutar.",
         avWarningTitle: "Advertencia de Antivirus (Falso Positivo)",
         avWarningIntro: "Tu antivirus podría bloquear PhotoHaul y mostrar una advertencia como esta. ¡No te preocupes!",
-        avDefenderApp: "Microsoft Defender SmartScreen ha bloqueado una aplicación no reconocida.",
-        avDefenderDetail: "Aplicación: PhotoHaul_Setup_v1.0.0.exe\nEditor: Desconocido",
+        defenderTitle: "PC protegido por Windows",
+        defenderMsg: "Microsoft Defender SmartScreen impidió que se ejecutara una aplicación no reconocida. La ejecución de esta aplicación podría poner en riesgo tu PC.",
+        defenderMoreInfo: "Más información",
+        defenderAppLabel: "App:",
+        defenderPublisherLabel: "Editor:",
+        defenderPublisherValue: "Editor desconocido",
+        defenderAllow: "Ejecutar de todos modos",
+        defenderDeny: "No ejecutar",
         avWhatTodo: "Qué hacer:",
-        avStep1: "Haz clic en \"Ejecutar de todos modos\" (como se muestra arriba)",
-        avStep2: "PhotoHaul está probado, es seguro y no tiene anuncios ni rastreo",
-        avStep3: "Si quieres más seguridad, analiza el archivo con escáneres en línea",
+        avStep1: "Haz clic en \"Más información\" (como se muestra arriba)",
+        avStep2: "Luego haz clic en \"Ejecutar de todos modos\"",
+        avStep3: "PhotoHaul está probado, es seguro y no tiene anuncios ni rastreo",
+        avReassurance: "<strong>¿Por qué esta advertencia?</strong> No pagamos costosos certificados de firma de código de grandes empresas. Esto no significa que la app sea peligrosa - solo significa \"este es un software nuevo que no proviene de una gran corporación\". PhotoHaul es seguro, probado y no contiene malware.",
         avConfirmBtn: "Entiendo, descargar ahora",
         badge1: "Amigo de la filosofía del software libre",
         badge2: "Sin spyware • Sin telemetría • Solo local",
@@ -185,12 +206,19 @@ const i18n = {
         downloadMeta: "Windows 10 / 11 • Pas d'installateur, pas de pub, pas de pistage. Juste dézipper et lancer.",
         avWarningTitle: "Avertissement Antivirus (Faux Positif)",
         avWarningIntro: "Votre antivirus pourrait bloquer PhotoHaul et afficher un avertissement comme celui-ci. Ne vous inquiétez pas !",
-        avDefenderApp: "Microsoft Defender SmartScreen a bloqué une application non reconnue.",
-        avDefenderDetail: "Application : PhotoHaul_Setup_v1.0.0.exe\nÉditeur : Inconnu",
+        defenderTitle: "PC protégé par Windows",
+        defenderMsg: "Microsoft Defender SmartScreen a empêché le démarrage d'une application non reconnue. L'exécution de cette application peut mettre votre PC en danger.",
+        defenderMoreInfo: "Informations complémentaires",
+        defenderAppLabel: "Application :",
+        defenderPublisherLabel: "Éditeur :",
+        defenderPublisherValue: "Éditeur inconnu",
+        defenderAllow: "Exécuter quand même",
+        defenderDeny: "Ne pas exécuter",
         avWhatTodo: "Que faire :",
-        avStep1: "Cliquez sur \"Exécuter quand même\" (comme montré ci-dessus)",
-        avStep2: "PhotoHaul est testé, sûr et sans publicités ni pistage",
-        avStep3: "Si vous voulez plus de sécurité, analysez le fichier avec des scanneurs en ligne",
+        avStep1: "Cliquez sur \"Informations complémentaires\" (comme montré ci-dessus)",
+        avStep2: "Puis cliquez sur \"Exécuter quand même\"",
+        avStep3: "PhotoHaul est testé, sûr et sans publicités ni pistage",
+        avReassurance: "<strong>Pourquoi cet avertissement ?</strong> Nous ne payons pas de coûteux certificats de signature de code des grandes entreprises. Cela ne signifie pas que l'application est dangereuse - cela signifie simplement \"c'est un nouveau logiciel qui ne provient pas d'une grande entreprise\". PhotoHaul est sûr, testé et ne contient pas de malware.",
         avConfirmBtn: "J'ai compris, télécharger maintenant",
         badge1: "Proche de la philosophie du logiciel libre",
         badge2: "Pas de spyware • Pas de télémétrie • Local uniquement",
@@ -239,12 +267,19 @@ const i18n = {
         downloadMeta: "Windows 10 / 11 • Kein Installer, keine Werbung, kein Tracking. Einfach entpacken und starten.",
         avWarningTitle: "Antivirus-Warnung (Fehlalarm)",
         avWarningIntro: "Dein Antivirus könnte PhotoHaul blockieren und eine Warnung wie diese anzeigen. Keine Sorge!",
-        avDefenderApp: "Microsoft Defender SmartScreen hat eine unbekannte App blockiert.",
-        avDefenderDetail: "App: PhotoHaul_Setup_v1.0.0.exe\nHerausgeber: Unbekannt",
+        defenderTitle: "PC von Windows geschützt",
+        defenderMsg: "Der Microsoft Defender SmartScreen hat den Start einer unbekannten App verhindert. Das Ausführen dieser App kann ein Risiko für Ihren PC darstellen.",
+        defenderMoreInfo: "Weitere Informationen",
+        defenderAppLabel: "App:",
+        defenderPublisherLabel: "Herausgeber:",
+        defenderPublisherValue: "Unbekannter Herausgeber",
+        defenderAllow: "Trotzdem ausführen",
+        defenderDeny: "Nicht ausführen",
         avWhatTodo: "Was ist zu tun:",
-        avStep1: "Klicke auf \"Trotzdem ausführen\" (wie oben gezeigt)",
-        avStep2: "PhotoHaul ist getestet, sicher und ohne Werbung oder Tracking",
-        avStep3: "Wenn du mehr Sicherheit möchtest, scanne die Datei mit Online-Scannern",
+        avStep1: "Klicke auf \"Weitere Informationen\" (wie oben gezeigt)",
+        avStep2: "Dann klicke auf \"Trotzdem ausführen\"",
+        avStep3: "PhotoHaul ist getestet, sicher und ohne Werbung oder Tracking",
+        avReassurance: "<strong>Warum diese Warnung?</strong> Wir bezahlen keine teuren Code-Signing-Zertifikate von großen Unternehmen. Das bedeutet nicht, dass die App gefährlich ist - es bedeutet nur \"dies ist neue Software, die nicht von einem großen Konzern stammt\". PhotoHaul ist sicher, getestet und enthält keine Malware.",
         avConfirmBtn: "Ich verstehe, jetzt herunterladen",
         badge1: "Nah an der freien-Software-Philosophie",
         badge2: "Kein Spyware • Keine Telemetrie • Nur lokal",
@@ -293,12 +328,19 @@ const i18n = {
         downloadMeta: "Windows 10 / 11 • Без установщика, без рекламы, без отслеживания. Просто распакуй и запусти.",
         avWarningTitle: "Предупреждение антивируса (ложное срабатывание)",
         avWarningIntro: "Твой антивирус может заблокировать PhotoHaul и показать предупреждение вроде этого. Не волнуйся!",
-        avDefenderApp: "Microsoft Defender SmartScreen заблокировал неизвестное приложение.",
-        avDefenderDetail: "Приложение: PhotoHaul_Setup_v1.0.0.exe\nИздатель: Неизвестно",
+        defenderTitle: "Компьютер защищён Windows",
+        defenderMsg: "Фильтр SmartScreen в Microsoft Defender предотвратил запуск неопознанного приложения. Запуск этого приложения может подвергнуть компьютер риску.",
+        defenderMoreInfo: "Подробнее",
+        defenderAppLabel: "Приложение:",
+        defenderPublisherLabel: "Издатель:",
+        defenderPublisherValue: "Неизвестный издатель",
+        defenderAllow: "Выполнить в любом случае",
+        defenderDeny: "Не выполнять",
         avWhatTodo: "Что делать:",
-        avStep1: "Нажми \"Запустить всё равно\" (как показано выше)",
-        avStep2: "PhotoHaul протестирован, безопасен и не содержит рекламы или отслеживания",
-        avStep3: "Если ты хочешь большей безопасности, проверь файл с помощью онлайн-сканеров",
+        avStep1: "Нажми \"Подробнее\" (как показано выше)",
+        avStep2: "Затем нажми \"Выполнить в любом случае\"",
+        avStep3: "PhotoHaul протестирован, безопасен и не содержит рекламы или отслеживания",
+        avReassurance: "<strong>Почему это предупреждение?</strong> Мы не платим за дорогие сертификаты подписи кода от крупных компаний. Это не означает, что приложение опасно - это означает лишь \"это новое программное обеспечение не от крупной корпорации\". PhotoHaul безопасен, протестирован и не содержит вредоносного ПО.",
         avConfirmBtn: "Я понял, скачать сейчас",
         badge1: "Дружественна философии свободного ПО",
         badge2: "Без шпионского ПО • Без телеметрии • Только локально",
@@ -375,11 +417,24 @@ function applyTranslations(lang) {
     // Antivirus modal translations
     set("antivirus-title", t.avWarningTitle);
     set("antivirus-intro", t.avWarningIntro);
-    set("defender-app-name", t.avDefenderApp);
-    set("defender-app-detail", t.avDefenderDetail);
     set("antivirus-what-todo", t.avWhatTodo);
     set("antivirus-confirm-text", t.avConfirmBtn);
-    
+
+    // Defender simulation translations - Step 1
+    set("defender-title-1", t.defenderTitle);
+    set("defender-msg-1", t.defenderMsg);
+    set("defender-more-info", t.defenderMoreInfo);
+    set("defender-deny-1", t.defenderDeny);
+
+    // Defender simulation translations - Step 2
+    set("defender-title-2", t.defenderTitle);
+    set("defender-msg-2", t.defenderMsg);
+    set("defender-app-label", t.defenderAppLabel);
+    set("defender-publisher-label", t.defenderPublisherLabel);
+    set("defender-publisher-value", t.defenderPublisherValue);
+    set("defender-allow", t.defenderAllow);
+    set("defender-deny-2", t.defenderDeny);
+
     // Antivirus steps
     const stepsList = document.getElementById("antivirus-steps");
     if (stepsList) {
@@ -389,6 +444,9 @@ function applyTranslations(lang) {
             <li id="antivirus-step-3">${t.avStep3}</li>
         `;
     }
+
+    // Reassurance message
+    set("antivirus-reassurance-text", t.avReassurance);
 
     set("av-list", `
         <li>${t.avList1}</li>
@@ -478,15 +536,17 @@ function scrollToInstructions() {
 }
 
 /**
- * ANTIVIRUS MODAL - Gestione
+ * ANTIVIRUS MODAL - Gestione con animazione step
  */
 let currentDownloadType = null;
+let defenderAnimationInterval = null;
 
 function openAntvirusModal(type) {
     currentDownloadType = type;
     const modal = document.getElementById("antivirus-modal");
     if (modal) {
         modal.classList.add("active");
+        startDefenderAnimation();
     }
 }
 
@@ -496,6 +556,46 @@ function closeAntvirusModal() {
         modal.classList.remove("active");
     }
     currentDownloadType = null;
+    stopDefenderAnimation();
+}
+
+function startDefenderAnimation() {
+    const step1 = document.getElementById("defender-step-1");
+    const step2 = document.getElementById("defender-step-2");
+
+    if (!step1 || !step2) return;
+
+    // Reset to step 1
+    step1.classList.add("active");
+    step2.classList.remove("active");
+
+    let currentStep = 1;
+
+    // Alternate between steps every 4 seconds
+    defenderAnimationInterval = setInterval(() => {
+        if (currentStep === 1) {
+            step1.classList.remove("active");
+            step2.classList.add("active");
+            currentStep = 2;
+        } else {
+            step2.classList.remove("active");
+            step1.classList.add("active");
+            currentStep = 1;
+        }
+    }, 4000);
+}
+
+function stopDefenderAnimation() {
+    if (defenderAnimationInterval) {
+        clearInterval(defenderAnimationInterval);
+        defenderAnimationInterval = null;
+    }
+
+    // Reset to step 1
+    const step1 = document.getElementById("defender-step-1");
+    const step2 = document.getElementById("defender-step-2");
+    if (step1) step1.classList.add("active");
+    if (step2) step2.classList.remove("active");
 }
 
 function confirmDownload() {
