@@ -403,12 +403,6 @@ function applyTranslations(lang) {
     set("badge-1", t.badge1);
     set("badge-2", t.badge2);
     set("badge-3", t.badge3);
-    set("hero-card-title", t.heroCardTitle);
-    set("hero-card-chip", t.heroCardChip);
-    set("hero-card-image-caption", t.heroCardImageCaption);
-    set("hero-card-body", t.heroCardBody);
-    set("hero-card-footer-text", t.heroCardFooterText);
-    set("hero-card-footer-chip", t.heroCardFooterChip);
     set("how-it-works-btn", t.howItWorksBtn);
     set("av-title", t.avTitle);
     set("av-text-1", t.avText1);
@@ -705,6 +699,41 @@ function initLightbox() {
         }
     });
 }
+
+/**
+ * Hero image modal functions
+ */
+function openHeroImageModal() {
+    const modal = document.getElementById("hero-image-modal");
+    const modalImg = document.getElementById("hero-image-modal-img");
+    const heroImg = document.getElementById("hero-preview-img");
+
+    if (modal && modalImg && heroImg) {
+        modalImg.src = heroImg.src;
+        modal.classList.add("active");
+    }
+}
+
+function closeHeroImageModal() {
+    const modal = document.getElementById("hero-image-modal");
+    if (modal) {
+        modal.classList.remove("active");
+    }
+}
+
+// Close hero image modal on ESC or click outside
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+        closeHeroImageModal();
+    }
+});
+
+document.addEventListener("click", function(event) {
+    const modal = document.getElementById("hero-image-modal");
+    if (event.target === modal) {
+        closeHeroImageModal();
+    }
+});
 
 /**
  * Inizializza il carosello

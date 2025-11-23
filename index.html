@@ -122,37 +122,15 @@
             </div>
 
             <div class="hero-right">
-                <div class="hero-card">
-                    <div class="hero-card-header">
-                        <div class="hero-card-title" id="hero-card-title">
-                            One folder for each day of your life.
-                        </div>
-                        <div class="hero-card-chip" id="hero-card-chip">
-                            Chaos → Archive mode
-                        </div>
-                    </div>
-                    <div class="hero-card-main">
-                        <div class="hero-card-image">
-                            <div class="hero-card-image-caption" id="hero-card-image-caption">
-                                Before: "New folder (23) – backup_old_FINAL"
-                                <br>
-                                After: <strong>2020-08-15_Birthday</strong>
-                            </div>
-                        </div>
-                        <div class="hero-card-body" id="hero-card-body">
-                            Point PhotoHaul to a disk or folder, press Start and watch the mess collapse into
-                            clean date-based folders. Your photos stay on your drives, where they belong.
-                        </div>
-                    </div>
-                    <div class="hero-card-footer">
-                        <div id="hero-card-footer-text">
-                            Built by people who hate losing photos and love simple tools.
-                        </div>
-                        <div class="chip-inline" id="hero-card-footer-chip">
-                            No cloud. No login. No nonsense.
-                        </div>
-                    </div>
+                <div class="hero-image-container">
+                    <img src="images_1/ph_number.jpg" alt="PhotoHaul Preview" class="hero-preview-img" id="hero-preview-img" onclick="openHeroImageModal()">
                 </div>
+            </div>
+
+            <!-- HERO IMAGE LIGHTBOX MODAL -->
+            <div id="hero-image-modal" class="hero-image-modal">
+                <span class="hero-image-modal-close" onclick="closeHeroImageModal()">&times;</span>
+                <img class="hero-image-modal-content" id="hero-image-modal-img" src="" alt="">
             </div>
         </section>
 
