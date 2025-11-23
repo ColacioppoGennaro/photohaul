@@ -1015,8 +1015,8 @@ header {
     justify-content: center;
 }
 
-/* ===== CAROSELLO ===== */
-.carousel-container {
+/* ===== VIDEO CONTAINER ===== */
+.video-container {
     position: relative;
     width: 100%;
     max-width: 100%;
@@ -1024,114 +1024,13 @@ header {
     border-radius: 0.8rem;
     overflow: hidden;
     background: radial-gradient(circle at top, #111827, #020617 70%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-.carousel-wrapper {
-    position: relative;
+.demo-video {
     width: 100%;
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 400px;
-}
-
-.carousel-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: none;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    animation: fadeInImg 0.5s ease;
-}
-
-.carousel-img.active {
+    height: auto;
     display: block;
-}
-
-.carousel-img:hover {
-    transform: scale(1.01);
-}
-
-@keyframes fadeInImg {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* BOTTONI FRECCIA - DISCRETE E SOVRAPPOSTE */
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(56, 189, 248, 0.25);
-    border: 1px solid rgba(56, 189, 248, 0.5);
-    color: var(--accent);
-    font-size: 1.2rem;
-    width: 2.2rem;
-    height: 2.2rem;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    z-index: 100;
-}
-
-.carousel-btn:hover {
-    background: rgba(56, 189, 248, 0.5);
-    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
-    transform: translateY(-50%) scale(1.05);
-}
-
-.carousel-btn:active {
-    transform: translateY(-50%) scale(0.95);
-}
-
-.carousel-prev {
-    left: 0.8rem;
-}
-
-.carousel-next {
-    right: 0.8rem;
-}
-
-/* INDICATORI PUNTI (DOTS) */
-.carousel-dots {
-    display: flex;
-    gap: 0.5rem;
-    justify-content: center;
-    padding: 1rem;
-    background: radial-gradient(circle at top, #111827, #020617 70%);
-    width: 100%;
-}
-
-.dot {
-    width: 0.6rem;
-    height: 0.6rem;
-    border-radius: 50%;
-    background: rgba(148, 163, 184, 0.5);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.dot.active {
-    background: var(--accent);
-    width: 1.5rem;
-    border-radius: 0.3rem;
-}
-
-.dot:hover {
-    background: rgba(148, 163, 184, 0.8);
+    border-radius: 0.8rem;
 }
 
 /* ===== LIGHTBOX MODAL ===== */

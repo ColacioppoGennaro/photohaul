@@ -174,21 +174,12 @@
                         your PC – ready for backup, viewing or sharing.
                     </p>
                 </div>
-                <div class="carousel-container">
-                    <!-- CAROSELLO IMMAGINI -->
-                    <div class="carousel-wrapper">
-                        <img src="images/p_h1.png" alt="PhotoHaul Screenshot 1" class="carousel-img zoomable-img active" data-index="0">
-                        <img src="images/p_h2.png" alt="PhotoHaul Screenshot 2" class="carousel-img zoomable-img" data-index="1" style="display:none;">
-                        
-                        <button class="carousel-btn carousel-prev" onclick="carouselPrev()">❮</button>
-                        <button class="carousel-btn carousel-next" onclick="carouselNext()">❯</button>
-                    </div>
-                    
-                    <!-- INDICATORI PUNTI (DOTS) -->
-                    <div class="carousel-dots" id="carousel-dots">
-                        <span class="dot active" onclick="currentSlide(0)"></span>
-                        <span class="dot" onclick="currentSlide(1)"></span>
-                    </div>
+                <div class="video-container">
+                    <!-- VIDEO DEMO -->
+                    <video id="demo-video" class="demo-video" autoplay muted loop playsinline>
+                        <source src="images_vid/demo.mp4" type="video/mp4">
+                        Il tuo browser non supporta i video HTML5.
+                    </video>
                 </div>
 
                 <!-- LIGHTBOX MODAL PER ZOOM -->

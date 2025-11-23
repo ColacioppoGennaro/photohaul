@@ -62,8 +62,8 @@ const i18n = {
         freedomTitle: "Why we care about free software and your freedom",
         freedomText1: "PhotoHaul is built around a simple idea: your photos are pieces of your life, not \"content\" to be harvested. We like the free software philosophy: small tools, understandable behavior, no dark patterns.",
         freedomText2: "That's why we don't lock you into an account, a subscription or a platform. The output is just normal folders and files. If one day you stop using PhotoHaul, your archive is still there, readable by any operating system, any viewer, any backup tool.",
-        footerLeft: "© 2025 PhotoHaul – Built with too many photos and not enough patience.",
-        footerRight: "No cloud. No ads inside the app. This page may show a banner to help keep the lights on."
+        footerLeft: "© 2025 PhotoHaul – for bug reports write to infoph@gruppogea.net",
+        footerRight: "No cloud. No ads. No spam. No data theft."
     },
 
     it: {
@@ -71,8 +71,8 @@ const i18n = {
         langLabel: "Lingua",
         adsPlaceholder: "Spazio 728x90 – qui collegherai il codice Google AdSense.",
         eyebrow: "Riprenditi il controllo dei tuoi ricordi.",
-        heroTitleMain: "Tutte le tue foto, finalmente non in mezzo al caos.",
-        heroSubtitle: "Tutti abbiamo foto e video sparsi ovunque, accumulati negli anni. Perché non riorganizzarli in un unico posto? Collega le tue foto disordinate a PhotoHaul e lui le riordina in cartelle per data di creazione. Non cancella nulla: crea solo copie organizzate. Se trova un doppione lo ignora, così avrai tutte le tue foto senza duplicati.",
+        heroTitleMain: "Tutte le foto e i video della tua vita organizzate in un tuo posto.",
+        heroSubtitle: "Tutti abbiamo foto e video sparsi ovunque, accumulati negli anni. PhotoHaul li raccoglie e li riorganizza in cartelle per data di creazione. Nessuna foto viene cancellata: PhotoHaul copia e riorganizza. Deciderai tu poi se cancellare dai dispositivi di origine e liberare spazio su telefoni e HD.",
         bullet1: "Libera spazio da telefoni, PC e ovunque: metti tutto in un solo posto scelto da te, anche un HD esterno.",
         bullet2: "PhotoHaul non cancella mai nulla: legge le date, organizza e crea copie ordinate.",
         bullet3: "Niente cloud, niente account, niente tracciamento. Le tue foto restano tue, sul tuo disco.",
@@ -123,8 +123,8 @@ const i18n = {
         freedomTitle: "Perché ci interessa il software libero (e la tua libertà)",
         freedomText1: "PhotoHaul nasce da un'idea semplice: le tue foto sono pezzi della tua vita, non \"contenuti\" da spremere. Ci piace la filosofia del software libero: strumenti piccoli, comportamento chiaro, niente trucchetti nascosti.",
         freedomText2: "Per questo non ti blocchiamo in account, abbonamenti o piattaforme chiuse. L'uscita è fatta di semplici cartelle e file normali. Anche se un giorno smetti di usare PhotoHaul, il tuo archivio resta lì, leggibile da qualsiasi sistema operativo, visualizzatore o programma di backup.",
-        footerLeft: "© 2025 PhotoHaul – Creato con troppe foto e poca pazienza.",
-        footerRight: "Niente cloud. Nessuna pubblicità dentro l'app. Qui sulla pagina può esserci un banner per pagare la corrente."
+        footerLeft: "© 2025 PhotoHaul – per segnalazioni bug scrivi a infoph@gruppogea.net",
+        footerRight: "Niente cloud. Nessuna pubblicità. Nessuno spam. Nessun furto dati."
     },
 
     es: {
@@ -184,8 +184,8 @@ const i18n = {
         freedomTitle: "Por qué nos importa el software libre (y tu libertad)",
         freedomText1: "PhotoHaul nace de una idea simple: tus fotos son trozos de tu vida, no \"contenido\" para exprimir. Nos gusta la filosofía del software libre: herramientas pequeñas, comportamiento claro, sin trucos oscuros.",
         freedomText2: "Por eso no te atamos a una cuenta, suscripción o plataforma. La salida son carpetas y archivos normales. Aunque un día dejes de usar PhotoHaul, tu archivo seguirá ahí, legible por cualquier sistema, visor o herramienta de copia.",
-        footerLeft: "© 2025 PhotoHaul – Creado con demasiadas fotos y poca paciencia.",
-        footerRight: "Sin nube. Sin anuncios dentro de la app. En esta página puede haber un banner para pagar la luz."
+        footerLeft: "© 2025 PhotoHaul – para reportar errores escribe a infoph@gruppogea.net",
+        footerRight: "Sin nube. Sin publicidad. Sin spam. Sin robo de datos."
     },
 
     fr: {
@@ -245,8 +245,8 @@ const i18n = {
         freedomTitle: "Pourquoi le logiciel libre (et votre liberté) comptent pour nous",
         freedomText1: "PhotoHaul part d'une idée simple : vos photos sont des morceaux de votre vie, pas du \"contenu\" à exploiter. Nous aimons la philosophie du logiciel libre : petits outils, comportement compréhensible, pas de pièges.",
         freedomText2: "C'est pourquoi nous ne vous enfermons pas dans un compte, un abonnement ou une plateforme fermée. La sortie, ce sont des dossiers et fichiers normaux. Même si un jour vous arrêtez d'utiliser PhotoHaul, votre archive reste lisible par n'importe quel système, visionneuse ou outil de sauvegarde.",
-        footerLeft: "© 2025 PhotoHaul – Créé avec trop de photos et peu de patience.",
-        footerRight: "Pas de cloud. Pas de pub dans l'app. Cette page peut afficher une bannière pour payer l'électricité."
+        footerLeft: "© 2025 PhotoHaul – pour signaler des bugs écrivez à infoph@gruppogea.net",
+        footerRight: "Pas de cloud. Pas de pub. Pas de spam. Pas de vol de données."
     },
 
     de: {
@@ -306,8 +306,8 @@ const i18n = {
         freedomTitle: "Warum uns freie Software (und deine Freiheit) wichtig ist",
         freedomText1: "PhotoHaul basiert auf einer einfachen Idee: Deine Fotos sind Teile deines Lebens, kein \"Content\" zum Ausschlachten. Wir mögen die freie-Software-Philosophie: kleine Tools, durchschaubares Verhalten, keine dunklen Tricks.",
         freedomText2: "Deshalb sperren wir dich nicht in ein Konto, ein Abo oder eine Plattform ein. Das Ergebnis sind normale Ordner und Dateien. Selbst wenn du PhotoHaul irgendwann nicht mehr nutzt, bleibt dein Archiv lesbar – auf jedem System, in jedem Viewer, mit jedem Backup-Tool.",
-        footerLeft: "© 2025 PhotoHaul – Entstanden aus zu vielen Fotos und zu wenig Geduld.",
-        footerRight: "Keine Cloud. Keine Werbung in der App. Auf dieser Seite kann ein Banner helfen, den Strom zu bezahlen."
+        footerLeft: "© 2025 PhotoHaul – für Fehlermeldungen schreibe an infoph@gruppogea.net",
+        footerRight: "Keine Cloud. Keine Werbung. Kein Spam. Kein Datendiebstahl."
     },
 
     ru: {
@@ -367,8 +367,8 @@ const i18n = {
         freedomTitle: "Почему для нас важны свободное ПО и твоя свобода",
         freedomText1: "PhotoHaul создана на простой идее: твои фото — это кусочки твоей жизни, не \"контент\" для эксплуатации. Нам нравится философия свободного ПО: маленькие инструменты, понятное поведение, никаких тёмных паттернов.",
         freedomText2: "Вот почему мы не запираем тебя в аккаунт, подписку или платформу. Результат — это просто обычные папки и файлы. Даже если ты когда-нибудь перестанешь использовать PhotoHaul, твой архив останется там, читаемый любой ОС, любым просмотрщиком, любым инструментом резервного копирования.",
-        footerLeft: "© 2025 PhotoHaul – Создано со слишком большим количеством фото и недостатком терпения.",
-        footerRight: "Никакого облака. Никакой рекламы внутри приложения. На этой странице может быть баннер, чтобы помочь оплатить электричество."
+        footerLeft: "© 2025 PhotoHaul – для сообщений об ошибках пишите на infoph@gruppogea.net",
+        footerRight: "Никакого облака. Никакой рекламы. Никакого спама. Никакой кражи данных."
     }
 };
 
@@ -756,10 +756,27 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+/**
+ * Smooth video loop - riavvia il video prima della fine per evitare il salto
+ */
+function initSmoothVideoLoop() {
+    const video = document.getElementById("demo-video");
+    if (!video) return;
+
+    // Quando il video è vicino alla fine, riavvia con fade
+    video.addEventListener("timeupdate", function() {
+        // Se mancano meno di 0.1 secondi alla fine, riavvia
+        if (video.duration - video.currentTime < 0.1) {
+            video.currentTime = 0;
+            video.play();
+        }
+    });
+}
+
 // Inizializza quando DOM è pronto
 document.addEventListener("DOMContentLoaded", function() {
     initLanguage();
-    initCarousel();
     initLightbox();
     initHamsterBanner();
+    initSmoothVideoLoop();
 });
