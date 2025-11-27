@@ -42,11 +42,14 @@ function initHamsterBanner() {
         SPAWN_LEFT_X: -15,
         SPAWN_RIGHT_X: 115,
         SPAWN_RATE: 0.015,
+        // BACKUP ORIGINALE: ['#f97316', '#d97706', '#78716c', '#a1a1aa', '#854d0e', '#475569']
         HAMSTER_COLORS: [
-            '#f97316', '#d97706', '#78716c', '#a1a1aa', '#854d0e', '#475569'
+            '#f97316', '#d97706', '#78716c', '#a1a1aa', '#854d0e', '#475569',
+            '#fbbf24', '#1c1917', '#fecaca', '#92400e'
         ],
-        MIN_SPEED: 0.03,
-        MAX_SPEED: 0.12,
+        // BACKUP ORIGINALE: MIN_SPEED: 0.03, MAX_SPEED: 0.12
+        MIN_SPEED: 0.02,
+        MAX_SPEED: 0.18,
         TURN_SPEED: 5,
         WALK_CYCLE_SPEED: 0.4,
         GRAVITY: 0.8,
@@ -58,7 +61,6 @@ function initHamsterBanner() {
     let hamsters = [];
     let nextId = 0;
     let draggedId = null;
-    let animationFrameId = null;
     
     const mouse = { x: 0, y: 0, vx: 0, vy: 0, isDown: false, lastX: 0, lastY: 0 };
     const predator = { active: false, x: 50 };
@@ -268,7 +270,7 @@ function initHamsterBanner() {
         const isLanding = h.state === 'LANDING';
         const isFleeing = h.state === 'FLEEING';
         const isDragging = h.state === 'DRAGGED';
-        
+
         let legSwing = Math.sin(h.walkFrame) * 6;
         let legOffset = Math.cos(h.walkFrame) * 3;
         let armSwing = 0;
@@ -453,9 +455,33 @@ function initHamsterBanner() {
                 el.style.willChange = 'transform';
                 el.style.userSelect = 'none';
                 el.style.pointerEvents = 'auto';
-                el.style.touchAction = 'none';
+                el.style.touchAction = 'auto';  // Allow page scroll - tap on hamster still works!
                 el.onmousedown = (e) => { e.preventDefault(); e.stopPropagation(); draggedId = h.id; mouse.isDown = true; };
-                el.ontouchstart = (e) => { draggedId = h.id; mouse.isDown = true; };
+
+                // MOBILE: Simplified touch system - just tap to launch
+                el.ontouchstart = (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    // Find the actual hamster in the current array
+                    const currentHamster = hamsters.find(ham => ham.id === h.id);
+                    if (!currentHamster || currentHamster.state === 'FALLING') return;
+
+                    // Immediate launch on touch - no waiting, no slingshot
+                    // Random upward launch with slight horizontal variation
+                    const horizontalVariation = (Math.random() - 0.5) * 2; // -1 to 1
+                    currentHamster.velocityX = horizontalVariation;
+                    currentHamster.velocityY = 3 + Math.random() * 2; // 3 to 5 upward velocity
+                    currentHamster.state = 'FALLING';
+                    currentHamster.altitude = 10; // Start with some altitude
+
+                    // Random falling pose
+                    const rand = Math.random();
+                    if (rand < 0.25) currentHamster.fallingPose = 'PANIC';
+                    else if (rand < 0.50) currentHamster.fallingPose = 'SKYDIVE';
+                    else if (rand < 0.75) currentHamster.fallingPose = 'TUCK';
+                    else currentHamster.fallingPose = 'GLASS';
+                };
 
                 const shadow = document.createElement('div');
                 shadow.className = 'hamster-shadow';
@@ -516,8 +542,8 @@ function initHamsterBanner() {
         const pupilX = catState.look === 'left' ? -6 : (catState.look === 'right' ? 6 : 0);
         catContainer.className = "banner-cat";
         catContainer.style.position = 'absolute';
-        catContainer.style.width = '256px';
-        catContainer.style.height = '192px';
+        catContainer.style.width = '180px';
+        catContainer.style.height = '135px';
         catContainer.style.pointerEvents = 'none';
         catContainer.style.zIndex = '0';
         catContainer.style.transition = 'transform 2000ms ease-in-out';
@@ -561,7 +587,7 @@ function initHamsterBanner() {
     function animate() {
         updateLogic();
         render();
-        animationFrameId = requestAnimationFrame(animate);
+        requestAnimationFrame(animate);
     }
 
     function startCatCycle() {
@@ -588,27 +614,34 @@ function initHamsterBanner() {
         }, delay);
     }
 
-    window.addEventListener('mousemove', (e) => {
+    function updateMousePosition(clientX, clientY) {
         const currentContainer = document.getElementById('hamsterBannerContainer');
         if (!currentContainer) return;
 
         const rect = currentContainer.getBoundingClientRect();
-        const xRaw = e.clientX - rect.left;
+        const xRaw = clientX - rect.left;
         const xPct = (xRaw / rect.width) * 100;
-        const yPx = rect.bottom - e.clientY;
-        
+        const yPx = rect.bottom - clientY;
+
         mouse.vx = xPct - mouse.lastX;
         mouse.vy = yPx - mouse.lastY;
         mouse.x = xPct;
         mouse.y = yPx;
         mouse.lastX = xPct;
         mouse.lastY = yPx;
+    }
+
+    window.addEventListener('mousemove', (e) => {
+        updateMousePosition(e.clientX, e.clientY);
     });
 
     window.addEventListener('mouseup', () => {
         draggedId = null;
         mouse.isDown = false;
     });
+
+    // Touch events support - Simplified for mobile
+    // No need for complex slingshot system - tap to launch works great!
 
     startCatCycle();
     animate();
