@@ -221,8 +221,8 @@ header {
 .banner-cat {
     position: absolute;
     bottom: 0;
-    width: 16rem;
-    height: 12rem;
+    width: 180px;
+    height: 135px;
     pointer-events: none;
     z-index: 5;
     left: 50%;
@@ -341,6 +341,14 @@ header {
     gap: 0.75rem;
     margin-bottom: 1rem;
     align-items: center;
+}
+
+.download-instructions {
+    width: 100%;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
 }
 
 .download-buttons-group {
@@ -949,6 +957,89 @@ header {
     color: #38bdf8;
 }
 
+/* STAFF LINK & MODAL */
+.staff-link-container {
+    text-align: right;
+    margin-top: 0.5rem;
+}
+
+.staff-link {
+    font-size: 0.75rem;
+    color: rgba(148, 163, 184, 0.5);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.staff-link:hover {
+    color: rgba(148, 163, 184, 0.8);
+    text-decoration: underline;
+}
+
+.staff-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    animation: fadeIn 0.3s ease;
+}
+
+.staff-modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.staff-modal-content {
+    max-width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    text-align: center;
+    animation: zoomIn 0.3s ease;
+    padding: 1rem;
+}
+
+.staff-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 10000;
+}
+
+.staff-modal-close:hover {
+    color: #38bdf8;
+}
+
+.staff-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.staff-photo {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 0.8rem;
+    object-fit: contain;
+}
+
+.staff-caption {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    color: #fbbf24;
+    font-style: italic;
+}
+
 /* SECTIONS */
 .section {
     margin-top: 2rem;
@@ -1124,7 +1215,7 @@ footer {
 /* RESPONSIVE MOBILE */
 @media (max-width: 768px) {
     html {
-        font-size: 15px;
+        font-size: 16px;
     }
 
     body {
@@ -1236,11 +1327,26 @@ footer {
         width: 100%;
         justify-content: flex-start;
     }
+
+    .staff-modal-content {
+        max-width: 95%;
+        max-height: 95vh;
+        padding: 0.5rem;
+    }
+
+    .staff-photo {
+        max-width: 100%;
+    }
+
+    .staff-caption {
+        font-size: 0.9rem;
+        margin-top: 1rem;
+    }
 }
 
 @media (max-width: 480px) {
     html {
-        font-size: 14px;
+        font-size: 15px;
     }
 
     .page-shell {
@@ -1283,5 +1389,213 @@ footer {
     .chip-inline {
         padding: 0.3rem 0.5rem;
         font-size: 0.75rem;
+    }
+}
+
+/* ===== ANDROID SECTION ===== */
+.section-android {
+    background: rgba(15,23,42,0.8);
+    border-left: 4px solid #10b981;
+    border-radius: 0.8rem;
+    padding: 2rem;
+}
+
+.android-content-wrapper {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    .android-content-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+.android-instructions h3 {
+    color: #10b981;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.android-steps {
+    list-style: decimal;
+    padding-left: 1.5rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.android-steps li {
+    margin-bottom: 0.4rem;
+}
+
+.android-steps li strong {
+    color: #10b981;
+}
+
+.android-warning {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    background: rgba(245, 158, 11, 0.15);
+    border: 1px solid rgba(245, 158, 11, 0.5);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-top: 1.5rem;
+}
+
+.android-warning .warning-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.android-warning p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.android-warning strong {
+    color: #c084fc;
+}
+
+.android-download-box {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.btn-android-download {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+}
+
+.btn-android-download:hover {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+}
+
+.android-meta {
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.android-image-container {
+    text-align: center;
+}
+
+.android-screenshot {
+    max-width: 100%;
+    max-height: 400px;
+    border-radius: 0.8rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.android-screenshot:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.android-image-caption {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* Android Image Modal */
+.android-image-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.android-image-modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.android-image-modal-content {
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 0.8rem;
+    animation: zoomIn 0.3s ease;
+}
+
+.android-image-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 10000;
+}
+
+.android-image-modal-close:hover {
+    color: #10b981;
+}
+
+/* ===== ANDROID BUTTON WITH NEW BADGE ===== */
+.btn-android {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    position: relative;
+}
+
+.btn-android:hover {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+}
+
+.badge-new {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #ef4444;
+    color: white;
+    font-size: 0.65rem;
+    font-weight: bold;
+    padding: 0.2rem 0.5rem;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 2px 8px rgba(239, 68, 68, 0.4);
+    animation: pulse-badge 2s infinite;
+}
+
+@keyframes pulse-badge {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@media (max-width: 768px) {
+    .section-android {
+        padding: 1.5rem;
+    }
+
+    .android-steps {
+        font-size: 0.9rem;
+    }
+
+    .badge-new {
+        top: -6px;
+        right: -6px;
+        font-size: 0.55rem;
+        padding: 0.15rem 0.4rem;
     }
 }
