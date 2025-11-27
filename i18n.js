@@ -16,11 +16,12 @@ const i18n = {
         bullet2: "Smart duplicate detection: same photo, different place? It keeps one, you keep the space.",
         bullet3: "Works on your own hard disk. No tracking, no account, no \"AI on the cloud\".",
         downloadBtn: "Download PhotoHaul for Windows",
+        downloadInstructions: "Download the installer (recommended) on your Windows PC and run the file.",
         downloadInstallerBtn: "Download Installer",
         downloadZipBtn: "Download ZIP",
         subtitleInstaller: "For those who love easy life",
         subtitleZip: "If you're a nerd club member",
-        downloadMeta: "Windows 10 / 11 • No installer, no ads, no tracking. Just unzip and run.",
+        downloadMeta: "Windows 10 / 11 • Free, safe, no ads or tracking.",
         avWarningTitle: "Antivirus Warning (False Positive)",
         avWarningIntro: "Your antivirus might block PhotoHaul and show a warning like this. Don't worry!",
         defenderTitle: "PC protected by Windows",
@@ -63,7 +64,26 @@ const i18n = {
         freedomText1: "PhotoHaul is built around a simple idea: your photos are pieces of your life, not \"content\" to be harvested. We like the free software philosophy: small tools, understandable behavior, no dark patterns.",
         freedomText2: "That's why we don't lock you into an account, a subscription or a platform. The output is just normal folders and files. If one day you stop using PhotoHaul, your archive is still there, readable by any operating system, any viewer, any backup tool.",
         footerLeft: "© 2025 PhotoHaul – for bug reports write to infoph@gruppogea.net",
-        footerRight: "No cloud. No ads. No spam. No data theft."
+        footerRight: "No cloud. No ads. No spam. No data theft.",
+        staffLink: "our staff",
+        staffCaption: "Guess who we are and win a super special trophy! :D",
+        // Android section
+        downloadAndroidText: "App Android",
+        subtitleAndroid: "Transfer photos via WiFi",
+        androidTitle: "PhotoHaul for Android",
+        androidIntro: "Transfer photos from your phone to your PC via WiFi. No cables, no cloud, direct connection on your local network.",
+        androidHowTitle: "How it works:",
+        androidStep1: "In PhotoHaul PC, click the <strong>Phone</strong> button (next to Select)",
+        androidStep2: "A QR code will appear on screen",
+        androidStep3: "Open the PhotoHaul app on your Android phone",
+        androidStep4: "Grant camera permission and scan the QR code",
+        androidStep5: "Phone and PC connect directly via WiFi (same network required)",
+        androidStep6: "Select photos on your phone and tap Send",
+        androidStep7: "On PC, choose <strong>Safe Copy</strong> (recommended) or <strong>Fast Copy</strong>",
+        androidWarning: "<strong>Important:</strong> To install the APK, you need to enable \"Install from unknown sources\" in your Android settings. This is normal for apps not from Google Play.",
+        androidDownloadText: "Download APK for Android",
+        androidMeta: "Android 7.0+ • WiFi required • No internet needed",
+        androidImageCaption: "Tap to enlarge"
     },
 
     it: {
@@ -77,11 +97,12 @@ const i18n = {
         bullet2: "PhotoHaul non cancella mai nulla: legge le date, organizza e crea copie ordinate.",
         bullet3: "Niente cloud, niente account, niente tracciamento. Le tue foto restano tue, sul tuo disco.",
         downloadBtn: "Scarica PhotoHaul per Windows",
+        downloadInstructions: "Scarica l'installer (consigliato) sul PC Windows e avvia il file.",
         downloadInstallerBtn: "Scarica Installer",
         downloadZipBtn: "Scarica ZIP",
         subtitleInstaller: "Per chi ama la vita comoda",
         subtitleZip: "Se sei del club nerd",
-        downloadMeta: "Windows 10 / 11 • Nessun installer, niente pubblicità, niente tracciamento. Solo unzip e avvio.",
+        downloadMeta: "Windows 10 / 11 • Gratuito, sicuro, senza pubblicità né tracciamento.",
         avWarningTitle: "Avvertenza Antivirus (Falso Positivo)",
         avWarningIntro: "Il tuo antivirus potrebbe bloccare PhotoHaul e mostrare un avvertimento come questo. Non preoccuparti!",
         defenderTitle: "PC protetto da Windows",
@@ -124,7 +145,26 @@ const i18n = {
         freedomText1: "PhotoHaul nasce da un'idea semplice: le tue foto sono pezzi della tua vita, non \"contenuti\" da spremere. Ci piace la filosofia del software libero: strumenti piccoli, comportamento chiaro, niente trucchetti nascosti.",
         freedomText2: "Per questo non ti blocchiamo in account, abbonamenti o piattaforme chiuse. L'uscita è fatta di semplici cartelle e file normali. Anche se un giorno smetti di usare PhotoHaul, il tuo archivio resta lì, leggibile da qualsiasi sistema operativo, visualizzatore o programma di backup.",
         footerLeft: "© 2025 PhotoHaul – per segnalazioni bug scrivi a infoph@gruppogea.net",
-        footerRight: "Niente cloud. Nessuna pubblicità. Nessuno spam. Nessun furto dati."
+        footerRight: "Niente cloud. Nessuna pubblicità. Nessuno spam. Nessun furto dati.",
+        staffLink: "il nostro staff",
+        staffCaption: "Chi indovina chi sono vince una coppa super speciale! :D",
+        // Android section
+        downloadAndroidText: "App Android",
+        subtitleAndroid: "Trasferisci foto via WiFi",
+        androidTitle: "PhotoHaul per Android",
+        androidIntro: "Trasferisci le foto dal telefono al PC via WiFi. Niente cavi, niente cloud, connessione diretta sulla tua rete locale.",
+        androidHowTitle: "Come funziona:",
+        androidStep1: "In PhotoHaul PC, clicca il pulsante <strong>Phone</strong> (accanto a Select)",
+        androidStep2: "Apparirà un QR code sullo schermo",
+        androidStep3: "Apri l'app PhotoHaul sul tuo telefono Android",
+        androidStep4: "Concedi il permesso alla fotocamera e inquadra il QR code",
+        androidStep5: "Telefono e PC si connettono direttamente via WiFi (stessa rete richiesta)",
+        androidStep6: "Seleziona le foto sul telefono e tocca Invia",
+        androidStep7: "Sul PC, scegli <strong>Safe Copy</strong> (consigliato) o <strong>Fast Copy</strong>",
+        androidWarning: "<strong>Importante:</strong> Per installare l'APK, devi abilitare \"Installa da origini sconosciute\" nelle impostazioni Android. È normale per le app non provenienti da Google Play.",
+        androidDownloadText: "Scarica APK per Android",
+        androidMeta: "Android 7.0+ • WiFi richiesto • Nessuna connessione internet necessaria",
+        androidImageCaption: "Tocca per ingrandire"
     },
 
     es: {
@@ -138,11 +178,12 @@ const i18n = {
         bullet2: "Detección inteligente de duplicados: ¿misma foto en sitios distintos? Conserva una, tú recuperas espacio.",
         bullet3: "Funciona en tu propio disco. Sin rastreo, sin cuenta, sin \"IA en la nube\".",
         downloadBtn: "Descargar PhotoHaul para Windows",
+        downloadInstructions: "Descarga el instalador (recomendado) en tu PC Windows y ejecuta el archivo.",
         downloadInstallerBtn: "Descargar Instalador",
         downloadZipBtn: "Descargar ZIP",
         subtitleInstaller: "Para quienes aman la vida fácil",
         subtitleZip: "Si eres del club nerd",
-        downloadMeta: "Windows 10 / 11 • Sin instalador, sin anuncios, sin rastreo. Solo descomprimir y ejecutar.",
+        downloadMeta: "Windows 10 / 11 • Gratis, seguro, sin anuncios ni rastreo.",
         avWarningTitle: "Advertencia de Antivirus (Falso Positivo)",
         avWarningIntro: "Tu antivirus podría bloquear PhotoHaul y mostrar una advertencia como esta. ¡No te preocupes!",
         defenderTitle: "PC protegido por Windows",
@@ -185,7 +226,26 @@ const i18n = {
         freedomText1: "PhotoHaul nace de una idea simple: tus fotos son trozos de tu vida, no \"contenido\" para exprimir. Nos gusta la filosofía del software libre: herramientas pequeñas, comportamiento claro, sin trucos oscuros.",
         freedomText2: "Por eso no te atamos a una cuenta, suscripción o plataforma. La salida son carpetas y archivos normales. Aunque un día dejes de usar PhotoHaul, tu archivo seguirá ahí, legible por cualquier sistema, visor o herramienta de copia.",
         footerLeft: "© 2025 PhotoHaul – para reportar errores escribe a infoph@gruppogea.net",
-        footerRight: "Sin nube. Sin publicidad. Sin spam. Sin robo de datos."
+        footerRight: "Sin nube. Sin publicidad. Sin spam. Sin robo de datos.",
+        staffLink: "nuestro equipo",
+        staffCaption: "¡Adivina quiénes somos y gana un trofeo súper especial! :D",
+        // Android section
+        downloadAndroidText: "App Android",
+        subtitleAndroid: "Transfiere fotos por WiFi",
+        androidTitle: "PhotoHaul para Android",
+        androidIntro: "Transfiere fotos de tu móvil al PC por WiFi. Sin cables, sin nube, conexión directa en tu red local.",
+        androidHowTitle: "Cómo funciona:",
+        androidStep1: "En PhotoHaul PC, haz clic en el botón <strong>Phone</strong> (junto a Select)",
+        androidStep2: "Aparecerá un código QR en pantalla",
+        androidStep3: "Abre la app PhotoHaul en tu móvil Android",
+        androidStep4: "Concede permiso a la cámara y escanea el código QR",
+        androidStep5: "Móvil y PC se conectan directamente por WiFi (misma red requerida)",
+        androidStep6: "Selecciona las fotos en tu móvil y toca Enviar",
+        androidStep7: "En el PC, elige <strong>Safe Copy</strong> (recomendado) o <strong>Fast Copy</strong>",
+        androidWarning: "<strong>Importante:</strong> Para instalar el APK, necesitas habilitar \"Instalar desde orígenes desconocidos\" en los ajustes de Android. Es normal para apps que no vienen de Google Play.",
+        androidDownloadText: "Descargar APK para Android",
+        androidMeta: "Android 7.0+ • WiFi requerido • Sin internet necesario",
+        androidImageCaption: "Toca para ampliar"
     },
 
     fr: {
@@ -199,11 +259,12 @@ const i18n = {
         bullet2: "Détection intelligente des doublons : même photo à plusieurs endroits ? Il en garde une, vous gagnez de la place.",
         bullet3: "Fonctionne sur votre propre disque. Pas de pistage, pas de compte, pas d'\"IA dans le cloud\".",
         downloadBtn: "Télécharger PhotoHaul pour Windows",
+        downloadInstructions: "Téléchargez l'installateur (recommandé) sur votre PC Windows et lancez le fichier.",
         downloadInstallerBtn: "Télécharger Installateur",
         downloadZipBtn: "Télécharger ZIP",
         subtitleInstaller: "Pour ceux qui aiment la vie facile",
         subtitleZip: "Si vous êtes du club nerd",
-        downloadMeta: "Windows 10 / 11 • Pas d'installateur, pas de pub, pas de pistage. Juste dézipper et lancer.",
+        downloadMeta: "Windows 10 / 11 • Gratuit, sûr, sans pub ni pistage.",
         avWarningTitle: "Avertissement Antivirus (Faux Positif)",
         avWarningIntro: "Votre antivirus pourrait bloquer PhotoHaul et afficher un avertissement comme celui-ci. Ne vous inquiétez pas !",
         defenderTitle: "PC protégé par Windows",
@@ -246,7 +307,26 @@ const i18n = {
         freedomText1: "PhotoHaul part d'une idée simple : vos photos sont des morceaux de votre vie, pas du \"contenu\" à exploiter. Nous aimons la philosophie du logiciel libre : petits outils, comportement compréhensible, pas de pièges.",
         freedomText2: "C'est pourquoi nous ne vous enfermons pas dans un compte, un abonnement ou une plateforme fermée. La sortie, ce sont des dossiers et fichiers normaux. Même si un jour vous arrêtez d'utiliser PhotoHaul, votre archive reste lisible par n'importe quel système, visionneuse ou outil de sauvegarde.",
         footerLeft: "© 2025 PhotoHaul – pour signaler des bugs écrivez à infoph@gruppogea.net",
-        footerRight: "Pas de cloud. Pas de pub. Pas de spam. Pas de vol de données."
+        footerRight: "Pas de cloud. Pas de pub. Pas de spam. Pas de vol de données.",
+        staffLink: "notre équipe",
+        staffCaption: "Devinez qui nous sommes et gagnez un trophée super spécial ! :D",
+        // Android section
+        downloadAndroidText: "App Android",
+        subtitleAndroid: "Transférez photos par WiFi",
+        androidTitle: "PhotoHaul pour Android",
+        androidIntro: "Transférez les photos de votre téléphone vers votre PC par WiFi. Pas de câbles, pas de cloud, connexion directe sur votre réseau local.",
+        androidHowTitle: "Comment ça marche :",
+        androidStep1: "Dans PhotoHaul PC, cliquez sur le bouton <strong>Phone</strong> (à côté de Select)",
+        androidStep2: "Un code QR apparaîtra à l'écran",
+        androidStep3: "Ouvrez l'app PhotoHaul sur votre téléphone Android",
+        androidStep4: "Accordez la permission caméra et scannez le code QR",
+        androidStep5: "Téléphone et PC se connectent directement par WiFi (même réseau requis)",
+        androidStep6: "Sélectionnez les photos sur votre téléphone et appuyez sur Envoyer",
+        androidStep7: "Sur le PC, choisissez <strong>Safe Copy</strong> (recommandé) ou <strong>Fast Copy</strong>",
+        androidWarning: "<strong>Important :</strong> Pour installer l'APK, vous devez activer \"Installation depuis des sources inconnues\" dans les paramètres Android. C'est normal pour les apps non issues de Google Play.",
+        androidDownloadText: "Télécharger APK pour Android",
+        androidMeta: "Android 7.0+ • WiFi requis • Pas d'internet nécessaire",
+        androidImageCaption: "Appuyez pour agrandir"
     },
 
     de: {
@@ -260,11 +340,12 @@ const i18n = {
         bullet2: "Intelligente Duplikaterkennung: dasselbe Foto an mehreren Orten? Eins bleibt, der Rest räumt Platz frei.",
         bullet3: "Läuft auf deiner eigenen Festplatte. Kein Tracking, kein Konto, keine \"KI in der Cloud\".",
         downloadBtn: "PhotoHaul für Windows herunterladen",
+        downloadInstructions: "Lade den Installer (empfohlen) auf deinen Windows-PC herunter und starte die Datei.",
         downloadInstallerBtn: "Installer herunterladen",
         downloadZipBtn: "ZIP herunterladen",
         subtitleInstaller: "Für alle, die es bequem mögen",
         subtitleZip: "Wenn du zum Nerd-Club gehörst",
-        downloadMeta: "Windows 10 / 11 • Kein Installer, keine Werbung, kein Tracking. Einfach entpacken und starten.",
+        downloadMeta: "Windows 10 / 11 • Kostenlos, sicher, keine Werbung oder Tracking.",
         avWarningTitle: "Antivirus-Warnung (Fehlalarm)",
         avWarningIntro: "Dein Antivirus könnte PhotoHaul blockieren und eine Warnung wie diese anzeigen. Keine Sorge!",
         defenderTitle: "PC von Windows geschützt",
@@ -307,7 +388,26 @@ const i18n = {
         freedomText1: "PhotoHaul basiert auf einer einfachen Idee: Deine Fotos sind Teile deines Lebens, kein \"Content\" zum Ausschlachten. Wir mögen die freie-Software-Philosophie: kleine Tools, durchschaubares Verhalten, keine dunklen Tricks.",
         freedomText2: "Deshalb sperren wir dich nicht in ein Konto, ein Abo oder eine Plattform ein. Das Ergebnis sind normale Ordner und Dateien. Selbst wenn du PhotoHaul irgendwann nicht mehr nutzt, bleibt dein Archiv lesbar – auf jedem System, in jedem Viewer, mit jedem Backup-Tool.",
         footerLeft: "© 2025 PhotoHaul – für Fehlermeldungen schreibe an infoph@gruppogea.net",
-        footerRight: "Keine Cloud. Keine Werbung. Kein Spam. Kein Datendiebstahl."
+        footerRight: "Keine Cloud. Keine Werbung. Kein Spam. Kein Datendiebstahl.",
+        staffLink: "unser Team",
+        staffCaption: "Rate, wer wir sind, und gewinne eine super spezielle Trophäe! :D",
+        // Android section
+        downloadAndroidText: "App Android",
+        subtitleAndroid: "Fotos per WiFi übertragen",
+        androidTitle: "PhotoHaul für Android",
+        androidIntro: "Übertrage Fotos von deinem Handy auf den PC per WiFi. Keine Kabel, keine Cloud, direkte Verbindung in deinem lokalen Netzwerk.",
+        androidHowTitle: "So funktioniert's:",
+        androidStep1: "In PhotoHaul PC klicke auf den <strong>Phone</strong>-Button (neben Select)",
+        androidStep2: "Ein QR-Code erscheint auf dem Bildschirm",
+        androidStep3: "Öffne die PhotoHaul-App auf deinem Android-Handy",
+        androidStep4: "Erlaube den Kamerazugriff und scanne den QR-Code",
+        androidStep5: "Handy und PC verbinden sich direkt per WiFi (gleiches Netzwerk erforderlich)",
+        androidStep6: "Wähle Fotos auf deinem Handy und tippe auf Senden",
+        androidStep7: "Auf dem PC wähle <strong>Safe Copy</strong> (empfohlen) oder <strong>Fast Copy</strong>",
+        androidWarning: "<strong>Wichtig:</strong> Um die APK zu installieren, musst du \"Installation aus unbekannten Quellen\" in den Android-Einstellungen aktivieren. Das ist normal für Apps, die nicht aus Google Play stammen.",
+        androidDownloadText: "APK für Android herunterladen",
+        androidMeta: "Android 7.0+ • WiFi erforderlich • Kein Internet nötig",
+        androidImageCaption: "Tippen zum Vergrößern"
     },
 
     ru: {
@@ -321,11 +421,12 @@ const i18n = {
         bullet2: "Умное обнаружение дубликатов: одно и то же фото в разных местах? Она сохранит одну копию, ты освободишь место.",
         bullet3: "Работает на твоём жёстком диске. Никакого отслеживания, никаких аккаунтов, никакого \"AI в облаке\".",
         downloadBtn: "Скачать PhotoHaul для Windows",
+        downloadInstructions: "Скачай установщик (рекомендуется) на Windows ПК и запусти файл.",
         downloadInstallerBtn: "Скачать установщик",
         downloadZipBtn: "Скачать ZIP",
         subtitleInstaller: "Для тех, кто любит простую жизнь",
         subtitleZip: "Если ты из клуба нердов",
-        downloadMeta: "Windows 10 / 11 • Без установщика, без рекламы, без отслеживания. Просто распакуй и запусти.",
+        downloadMeta: "Windows 10 / 11 • Бесплатно, безопасно, без рекламы и отслеживания.",
         avWarningTitle: "Предупреждение антивируса (ложное срабатывание)",
         avWarningIntro: "Твой антивирус может заблокировать PhotoHaul и показать предупреждение вроде этого. Не волнуйся!",
         defenderTitle: "Компьютер защищён Windows",
@@ -368,7 +469,26 @@ const i18n = {
         freedomText1: "PhotoHaul создана на простой идее: твои фото — это кусочки твоей жизни, не \"контент\" для эксплуатации. Нам нравится философия свободного ПО: маленькие инструменты, понятное поведение, никаких тёмных паттернов.",
         freedomText2: "Вот почему мы не запираем тебя в аккаунт, подписку или платформу. Результат — это просто обычные папки и файлы. Даже если ты когда-нибудь перестанешь использовать PhotoHaul, твой архив останется там, читаемый любой ОС, любым просмотрщиком, любым инструментом резервного копирования.",
         footerLeft: "© 2025 PhotoHaul – для сообщений об ошибках пишите на infoph@gruppogea.net",
-        footerRight: "Никакого облака. Никакой рекламы. Никакого спама. Никакой кражи данных."
+        footerRight: "Никакого облака. Никакой рекламы. Никакого спама. Никакой кражи данных.",
+        staffLink: "наша команда",
+        staffCaption: "Угадай, кто мы, и выиграй супер особенный трофей! :D",
+        // Android section
+        downloadAndroidText: "App Android",
+        subtitleAndroid: "Передача фото по WiFi",
+        androidTitle: "PhotoHaul для Android",
+        androidIntro: "Передавай фото с телефона на ПК по WiFi. Без кабелей, без облака, прямое соединение в твоей локальной сети.",
+        androidHowTitle: "Как это работает:",
+        androidStep1: "В PhotoHaul PC нажми кнопку <strong>Phone</strong> (рядом с Select)",
+        androidStep2: "На экране появится QR-код",
+        androidStep3: "Открой приложение PhotoHaul на своём Android-телефоне",
+        androidStep4: "Дай разрешение на камеру и отсканируй QR-код",
+        androidStep5: "Телефон и ПК соединяются напрямую по WiFi (нужна одна сеть)",
+        androidStep6: "Выбери фото на телефоне и нажми Отправить",
+        androidStep7: "На ПК выбери <strong>Safe Copy</strong> (рекомендуется) или <strong>Fast Copy</strong>",
+        androidWarning: "<strong>Важно:</strong> Для установки APK нужно включить \"Установка из неизвестных источников\" в настройках Android. Это нормально для приложений не из Google Play.",
+        androidDownloadText: "Скачать APK для Android",
+        androidMeta: "Android 7.0+ • Требуется WiFi • Интернет не нужен",
+        androidImageCaption: "Нажми для увеличения"
     }
 };
 
@@ -395,6 +515,7 @@ function applyTranslations(lang) {
     set("bullet-1", t.bullet1);
     set("bullet-2", t.bullet2);
     set("bullet-3", t.bullet3);
+    set("download-instructions", t.downloadInstructions);
     set("download-installer-text", t.downloadInstallerBtn);
     set("download-zip-text", t.downloadZipBtn);
     set("subtitle-installer", t.subtitleInstaller);
@@ -464,6 +585,28 @@ function applyTranslations(lang) {
     set("freedom-text-2", t.freedomText2);
     set("footer-left", t.footerLeft);
     set("footer-right", t.footerRight);
+
+    // Staff easter egg
+    set("staff-link", t.staffLink);
+    set("staff-caption", t.staffCaption);
+
+    // Android section translations
+    set("download-android-text", t.downloadAndroidText);
+    set("subtitle-android", t.subtitleAndroid);
+    set("android-title", t.androidTitle);
+    set("android-intro", t.androidIntro);
+    set("android-how-title", t.androidHowTitle);
+    set("android-step-1", t.androidStep1);
+    set("android-step-2", t.androidStep2);
+    set("android-step-3", t.androidStep3);
+    set("android-step-4", t.androidStep4);
+    set("android-step-5", t.androidStep5);
+    set("android-step-6", t.androidStep6);
+    set("android-step-7", t.androidStep7);
+    set("android-warning-text", t.androidWarning);
+    set("android-download-text", t.androidDownloadText);
+    set("android-meta", t.androidMeta);
+    set("android-image-caption", t.androidImageCaption);
 }
 
 /**
@@ -595,13 +738,58 @@ function stopDefenderAnimation() {
 function confirmDownload() {
     if (currentDownloadType === "installer") {
         // Download installer da GitHub
-        window.location.href = "https://github.com/ColacioppoGennaro/photohaul/releases/download/v1.0.0/PhotoHaul_Setup_v1.0.0.exe";
+        window.location.href = "https://github.com/ColacioppoGennaro/photohaul/releases/download/Ready/PhotoHaul_Setup_v1.0.0.exe";
     } else if (currentDownloadType === "zip") {
-        // ZIP non ancora disponibile
-        alert("ZIP version coming soon!");
-        closeAntvirusModal();
+        // Download ZIP da GitHub
+        window.location.href = "https://github.com/ColacioppoGennaro/photohaul/releases/download/Ready/PhotoHaul_Portable_v1.0.0.zip";
+    }
+    closeAntvirusModal();
+}
+
+/**
+ * ANDROID SECTION - Functions
+ */
+function scrollToAndroidSection() {
+    const section = document.getElementById("android-section");
+    if (!section) return;
+    section.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function downloadAndroidApp() {
+    window.location.href = "https://github.com/ColacioppoGennaro/photohaul/releases/download/Ready/PhotoHaul_v1.0.apk";
+}
+
+function openAndroidImageModal() {
+    const modal = document.getElementById("android-image-modal");
+    const modalImg = document.getElementById("android-image-modal-img");
+    const screenshot = document.getElementById("android-screenshot");
+
+    if (modal && modalImg && screenshot) {
+        modalImg.src = screenshot.src;
+        modal.classList.add("active");
     }
 }
+
+function closeAndroidImageModal() {
+    const modal = document.getElementById("android-image-modal");
+    if (modal) {
+        modal.classList.remove("active");
+    }
+}
+
+// Close android modal on ESC or click outside
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+        closeAndroidImageModal();
+    }
+});
+
+document.addEventListener("click", function(event) {
+    const modal = document.getElementById("android-image-modal");
+    if (event.target === modal) {
+        closeAndroidImageModal();
+    }
+});
 
 /**
  * CAROSELLO - Variabili globali
@@ -772,6 +960,37 @@ function initSmoothVideoLoop() {
         }
     });
 }
+
+/**
+ * Staff gallery modal functions
+ */
+function openStaffModal() {
+    const modal = document.getElementById("staff-modal");
+    if (modal) {
+        modal.classList.add("active");
+    }
+}
+
+function closeStaffModal() {
+    const modal = document.getElementById("staff-modal");
+    if (modal) {
+        modal.classList.remove("active");
+    }
+}
+
+// Close staff modal on ESC or click outside
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+        closeStaffModal();
+    }
+});
+
+document.addEventListener("click", function(event) {
+    const modal = document.getElementById("staff-modal");
+    if (event.target === modal) {
+        closeStaffModal();
+    }
+});
 
 // Inizializza quando DOM è pronto
 document.addEventListener("DOMContentLoaded", function() {
